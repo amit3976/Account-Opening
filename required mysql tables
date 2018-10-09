@@ -1,0 +1,123 @@
+registration table -
+
+create table registration_table (
+	app_id int, full_name varchar(20), password varchar(20), is_adhar varchar(3),
+	 dob varchar(12), mobile varchar(10), email varchar(70) primary key
+);
+
+
+alter table registration_table add unique (aap_id)
+
+
+
+account detail table -
+
+create table account_details (
+
+	app_id int primary key,
+	account_type varchar(15),
+    
+	account_for varchar(15),
+    
+	aadhar_num varchar(16),
+    
+	pan_num varchar(10),
+    
+	state varchar(25),
+    
+	city varchar(25),
+    
+	branch varchar(15)
+
+)
+
+
+
+personal details table -
+
+create table personal_details(
+	
+	app_id int primary key,
+ 
+	full_name varchar(40), 
+
+	father_name varchar(40),
+ 
+	mother_name varchar(40),
+
+  	email varchar(70),
+	mobile varchar(10),
+	gender varchar(10),
+ 
+	marital_status varchar(10),
+ 
+	nationality varchar(20),
+  
+	residential_status varchar(30),
+ 
+	identification_mark varchar(50),
+  
+	occupation varchar(30),
+    
+	date_of_birth varchar(15),
+    
+	annual_income varchar(10),
+    
+	highest_qual varchar(20),
+	
+	applicant_type varchar(20),
+    
+	permanent_address varchar(200),
+
+	current_address varchar(200)
+
+)
+
+
+
+kyc details table-
+
+create table kyc_details (
+	
+	app_id int primary key, 
+	
+	address_proof varchar(200),
+    
+	pan_card varchar(200),
+    
+	aadhar_card varchar(200),
+    
+	photograph varchar(200),
+    
+	signature varchar(200)
+
+)
+
+
+
+approved applications -
+
+create table approved_applications (app_id int primary key,account_number varchar(20) unique, ifsc_code varchar(20), account_type varchar(20), branch varchar(30), city varchar(20), state varchar(20), aadhar_num varchar(16) , pan_num varchar(12)
+) 
+
+
+
+rejected applications -
+
+create table rejected_applications (app_id int primary key,reason varchar(150))
+
+
+
+status applications-
+
+create table status_applications(app_id int primary key,urn varchar(30), app_status varchar(10), applied_on date)
+
+
+otp_table - 
+
+create table otp_table (username varchar(70), otp int(9))
+
+
+ifsc_code-
+
+create table ifsc_code (branch varchar(50), ifsc varchar(20))
