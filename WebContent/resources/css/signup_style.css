@@ -1,0 +1,10 @@
+body h1{
+    font-family: sans-serif;
+    color:wheat;
+}
+.container{
+    background: none;
+}
+#up button:hover {
+	background-color: grey;
+}
